@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="ie=edge"
+  >
+  <title>Vacation Weather</title>
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  >
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron text-center">
+          <h1>Visit the City of <br>{{ vacation.city }}</h1>
+        </div>
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <img
+              src="{{ vacation.city_img }}"
+              alt="{{vacation.city}}"
+              width=400
+            >
+            <h2>The typical weather in {{vacation.city}} is:</h2>
+            <h3>Max Temp: {{ vacation.max_temp }}</h3>
+            <h3>Min Temp: {{ vacation.min_temp }}</h3>
+          </div>
+          <div class="col-md-6 text-center">
+            <div id="myDiv"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- d3 cdn -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.5.0/d3.min.js"
+    integrity="sha512-0XfwGD1nxplHpehcSVI7lY+m/5L37PNHDt+DOc7aLFckwPXjnjeA1oeNbru7YeI4VLs9i+ADnnHEhP69C9CqTA=="
+    crossorigin="anonymous"
+  ></script>
+  <!-- my js -->
+  <script src="{{ url_for('static', filename='js/app.js')}}"></script>
+</body>
+
+</html>

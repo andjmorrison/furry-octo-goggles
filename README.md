@@ -1,1 +1,1 @@
-# furry-octo-goggles
+# FURRY-OCTO-GOGGLES
